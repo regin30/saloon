@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Czizh";
+  src: url("./fonts/ofont.ru_Czizh.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+html {
+  min-width: 100vw;
+  min-height: 100dvh;
+	box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+
+  button {
+    border: none;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  ul, ol, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#root {
+  margin: 0 auto;
+  text-align: center;
+  height: 100dvh;
+	box-sizing: border-box;
+}
+
+:root {
+  --palette-live-blue: #0085F4;
+  --palette-middle: #57b6cb;
+  --palette-white: #FDFDFD;
+  --palette-dark: #28798c;
+  --palette-live-grey-5: #E1E4E5;
+  --palette-live-bg-0-white: #fff;
+}

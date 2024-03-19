@@ -1,0 +1,14 @@
+.button{
+	padding: 20px 40px;
+	font-size: 2.2dvh;
+	border: 2px solid var(--palette-middle);
+	border-radius: 50px;
+	font-family: 'Montserrat';
+	font-weight: 500;
+}
+
+@media (max-width: 768px) {
+	.button {
+		padding: 15px 35px;
+	}
+}

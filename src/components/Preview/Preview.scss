@@ -1,0 +1,48 @@
+.preview {
+	display: flex;
+	align-items: center;
+	height: 350px;
+	padding-top: 20px;
+	border-bottom: 2px solid var(--palette-middle);
+
+	.preview__content {
+		flex: 1;
+		height: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-direction: column;
+		padding-bottom: 30px;
+
+		.preview__title {
+			margin: 0;
+			text-align: start;
+			font-size: 5dvh;
+			font-weight: normal;
+			color: var(--palette-dark);
+			font-family: "Czizh";
+		}
+
+		.preview__text {
+			margin: 0;
+			text-align: start;
+			font-size: 3dvh;
+		}
+
+	}
+
+	.preview__img {
+		box-sizing: border-box;
+		height: 350px;
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	@media (max-width: 768px) {
+		.preview__img {
+			display: none;
+		}
+	}
+}
