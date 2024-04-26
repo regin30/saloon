@@ -1,9 +1,10 @@
 import { FC } from 'react'
 import './Header.scss'
-import MenuBurger from '../MenuBurger/MenuBurger'
 import ContactButton from '../ContactButton/ContactButton'
 import MenuButton from '../MenuButton/MenuButton'
 import Logo from '../../assets/flower.svg'
+import Menu from '../../assets/menu.svg'
+import MenuMini from '../MenuMini/MenuMini'
 
 
 const Header: FC = () => {
@@ -23,14 +24,16 @@ const Header: FC = () => {
 						<MenuButton title='Контакты' />
 					</div>
 
-					<div className='header__menu-burger'>
-						<MenuBurger />
-					</div>
-
 					<div className='header__menu-button'>
 						<ContactButton />
 					</div>
+
+					<button className='menu-mini__button'>
+						<img src={Menu} className='menu-mini__icon' />
+					</button>
 				</div>
+
+				<MenuMini />
 			</div>
 		</>
 	)

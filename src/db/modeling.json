@@ -1,0 +1,39 @@
+{
+	"obj": [
+		{
+			"title": "modeling",
+			"services": [
+				{
+					"id": 20,
+					"name": "Кавитация",
+					"place": null,
+					"price": [700]
+				},
+				{
+					"id": 21,
+					"name": "LPG-массаж",
+					"place": null,
+					"price": [1100]
+				},
+				{
+					"id": 22,
+					"name": "Вакуумный массаж",
+					"place": null,
+					"price": [600]
+				},
+				{
+					"id": 23,
+					"name": "Биотоки",
+					"place": null,
+					"price": [400]
+				},
+				{
+					"id": 24,
+					"name": "RF-лифтинг",
+					"place": null,
+					"price": [8000]
+				}
+			]
+		}
+	]
+}

@@ -1,5 +1,10 @@
 .app {
   box-sizing: border-box;
-	width: calc(100vw - 15px);
 	min-height: 100dvh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: var(--palette-white);
+	margin: 0 auto;
 }

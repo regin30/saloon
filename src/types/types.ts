@@ -15,10 +15,12 @@ interface IButtonStyle {
 interface Service {
 	id: number,
 	name: string,
-	price: number
+	place: string[] | null,
+	price: number[]
 }
 
 interface BeautyCategory extends Title {
+	title: string,
 	services: Service[]
 }
 
@@ -26,13 +28,9 @@ interface BeautyServices {
 	obj: BeautyCategory[]
 }
 
-interface IAccordionProps {
-	categories: BeautyServices,
-	type: 'single' | 'multiple'
-}
-
 export type {
 	IButtonProps,
 	IButtonStyle,
-	IAccordionProps
+	BeautyServices,
+	BeautyCategory
 }

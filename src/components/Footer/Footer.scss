@@ -1,84 +1,82 @@
 .footer {
 	width: 100%;
-	background-color: var(--palette-dark);
+	background-color: var(--palette-dark-grey);
 	color: var(--palette-white);
 	box-sizing: border-box;
-	border-top-left-radius: 50px;
-	border-top-right-radius: 50px;
 
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	padding: 40px;
 	box-sizing: border-box;
 
-	.footer__contacts,
-	.footer__documentation {
+	.footer__contacts {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		flex: 1;
 	}
 
 	.footer__title {
-		font-family: "Czizh";
 		font-size: 25px;
 		margin: 0 0 20px 0;
-		text-align: right;
-	}
-
-	.footer__contacts {
-		.footer__title {
-			text-align: left;
-		}
+		font-weight: 400;
 	}
 
 	.footer__list {
-		li {
-			margin-bottom: 15px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+
+		.footer__list-item {
+			margin-right: 15px;
 			font-size: 16px;
 			display: flex;
 			align-items: center;
 			width: 100%;
 		}
 
-		.list-item__icon {
-			height: 25px;
-			margin-right: 15px;
+		.footer__list-item:last-child {
+			margin-right: 0;
 		}
+	}
 
-		.list-item__icon-network {
-			height: 40px;
-			width: 40px;
-			margin-right: 15px;
+	@media (max-width: 380px) {
+
+		.footer__list{
+			flex-direction: column;
+			align-items: flex-start;
+			width: max-content;
+
+			.footer__list-item{
+				display: grid;
+				grid-template-columns: 40px 1fr;
+				text-align: start;
+				margin-bottom: 15px;
+
+				.list-item__icon {
+					margin-right: 0;
+				}
+			}
 		}
+	}
+
+	.list-item__icon-network {
+		height: 40px;
+		width: 40px;
+		margin-right: 15px;
 	}
 
 	.footer__documentation {
-		li {
-			text-align: right;
-			justify-content: flex-end;
-		}
-	}
-}
-
-@media (max-width: 768px) {
-	.footer {
-		flex-direction: column;
+		margin-top: 20px;
+		display: flex;
 		align-items: center;
+		flex-direction: column;
 
-		.footer__contacts,
-		.footer__documentation {
-			flex: 1;
-			width: 100%;
-		}
-
-		.footer__documentation {
-			.footer__title{
-				text-align: left;
-			}
-
-			li {
-				text-align: left;
-				justify-content: flex-start;
-			}
+		span {
+			font-size: 16px;
+			margin-bottom: 10px;
 		}
 	}
 }

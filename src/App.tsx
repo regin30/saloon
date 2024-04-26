@@ -4,6 +4,7 @@ import Home from './views/Home/Home'
 import Service from './views/Service/Service'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
+import AestheticServices from './views/AestheticServices/AestheticServices'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/service/:id" element={<Service />} />
+          <Route path="/aesthetic" element={<AestheticServices />} />
         </Routes>
 
         <Footer />

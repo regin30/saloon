@@ -9,7 +9,6 @@
 }
 
 html {
-  min-width: 100vw;
   min-height: 100dvh;
 	box-sizing: border-box;
 }
@@ -36,6 +35,11 @@ body {
     margin: 0;
     padding: 0;
   }
+
+  a{
+    text-decoration: none;
+    color: #393a3e;
+  }
 }
 
 #root {
@@ -43,6 +47,8 @@ body {
   text-align: center;
   height: 100dvh;
 	box-sizing: border-box;
+  min-height: 100dvh;
+	background-color: #e1f9ff;
 }
 
 :root {
@@ -50,6 +56,7 @@ body {
   --palette-middle: #57b6cb;
   --palette-white: #FDFDFD;
   --palette-dark: #28798c;
+  --palette-dark-grey: #393a3e;
   --palette-live-grey-5: #E1E4E5;
   --palette-live-bg-0-white: #fff;
 }
