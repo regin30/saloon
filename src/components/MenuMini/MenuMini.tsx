@@ -3,9 +3,17 @@ import './MenuMini.scss'
 import { Modal } from 'antd'
 import SocialNetworks from '../SocialNetworks/SocialNetworks'
 
-const MenuMini: FC = () => {
+interface IMenuMiniProps {
+  closeModal: (arg: boolean) => void;
+  opened: boolean
+}
+
+const MenuMini: FC<IMenuMiniProps> = ({ closeModal, opened }) => {
   return (
-    <Modal open={true}>
+    <Modal
+      open={opened}
+      onCancel={() => closeModal(false)}
+    >
       <div className='menu-modal'>
         <span className='menu-modal__item'>О нас</span>
         <span className='menu-modal__item'>Услуги</span>

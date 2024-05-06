@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import './Header.scss'
 import ContactButton from '../ContactButton/ContactButton'
 import MenuButton from '../MenuButton/MenuButton'
@@ -6,8 +6,8 @@ import Logo from '../../assets/flower.svg'
 import Menu from '../../assets/menu.svg'
 import MenuMini from '../MenuMini/MenuMini'
 
-
 const Header: FC = () => {
+	const [openMenuMini, setOpenMenuMiny] = useState<boolean>(false)
 	return (
 		<>
 			<div className='header'>
@@ -28,12 +28,15 @@ const Header: FC = () => {
 						<ContactButton />
 					</div>
 
-					<button className='menu-mini__button'>
+					<button
+						className='menu-mini__button'
+						onClick={() => setOpenMenuMiny(true)}
+					>
 						<img src={Menu} className='menu-mini__icon' />
 					</button>
 				</div>
 
-				<MenuMini />
+				<MenuMini closeModal={setOpenMenuMiny} opened={openMenuMini}/>
 			</div>
 		</>
 	)

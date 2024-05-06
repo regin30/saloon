@@ -5,7 +5,7 @@ import AntiAge from '../../assets/antiage.jpg'
 import SkinCare from '../../assets/skin_care.jpg'
 import { Link } from 'react-router-dom'
 
-const Services: FC = () => {
+const MenuServices: FC = () => {
 
   return (
     <div className='services'>
@@ -35,5 +35,5 @@ const Services: FC = () => {
   )
 }
 
-export default Services
+export default MenuServices
 

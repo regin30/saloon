@@ -3,21 +3,26 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://reg93.github.io/saloon/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
+    "deploy": "gh-pages -d build",
+    "clean": "gh-pages-clean",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "antd": "^5.16.2",
+    "gh-pages": "^6.1.1",
     "install": "^0.13.0",
     "npm": "^10.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.1",
     "react-smooth-collapse": "^2.1.2",
-    "react-whatsapp": "^0.3.0"
+    "react-whatsapp": "^0.3.0",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
