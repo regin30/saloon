@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import './ServiceategoriesList.scss'
 import { Link } from 'react-router-dom'
-import LogoMini from '../../assets/logo-mini.png'
-import ArrowRight from '../../assets/arrow_right.svg'
+import LogoMini from '/assets/logo-mini.png'
+import ArrowRight from '/assets/arrow_right.svg'
 import { ContextValue } from '../../types/types'
 import { useMyContext } from '../../context/context'
 

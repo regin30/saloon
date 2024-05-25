@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import './Footer.scss'
 
-import Location from '../../assets/location.svg'
-import Phone from '../../assets/phone.svg'
-import Email from '../../assets/email.svg'
+import Location from '/assets/location.svg'
+import Phone from '/assets/phone.svg'
+import Email from '/assets/email.svg'
 import SocialNetworks from '../SocialNetworks/SocialNetworks'
 
 

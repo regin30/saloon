@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import './SocialNetworks.tsx.scss'
 
-import Inst from '../../assets/instagram.svg'
-import WA from '../../assets/whatsapp.svg'
-import VK from '../../assets/vkontakte.svg'
+import Inst from '/assets/instagram.svg'
+import WA from '/assets/whatsapp.svg'
+import VK from '/assets/vkontakte.svg'
 
 
 const SocialNetworks: FC = () => {

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import './ImageBlock.scss'
-import Image from '../../assets/face.png'
+import Image from '/assets/face.png'
 
 
 const ImageBlock: FC = () => {
