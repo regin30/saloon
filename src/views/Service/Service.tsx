@@ -10,7 +10,7 @@ import description from '../../db/services_descriptions.json'
 import ArrowDown from '../../assets/arrow_down.svg'
 
 const Service: FC = () => {
-  const { id = 1 } = useParams()
+  const { id = null } = useParams()
 
   const [openedInfo, setOpenedInfo] = useState<number[]>([])
 
@@ -19,9 +19,9 @@ const Service: FC = () => {
   }, [id])
 
   function getCurrentServices() {
-    if (+id === 3) {
+    if (id && +id === 3) {
       return antiAge.obj
-    } else if (+id === 1) {
+    } else if (id && +id === 1) {
       return aestethic.obj
     } else {
       return modeling.obj
@@ -55,17 +55,19 @@ const Service: FC = () => {
                     return (
                       <div key={serviceIndex} className='services__category-item-container'>
                         <div className='services__category-item'>
-                          <button
-                            className='services__category-item-button'
-                            onClick={() => handleArrowButton(service.id)}>
-                            <img
-                              src={ArrowDown}
-                              className={
-                                openedInfo.includes(service.id) ? 'arrow--up'
-                                  : 'arrow--down'
-                              }
-                            />
-                          </button>
+                          {id && +id !== 1 &&
+                            <button
+                              className='services__category-item-button'
+                              onClick={() => handleArrowButton(service.id)}>
+                              <img
+                                src={ArrowDown}
+                                className={
+                                  openedInfo.includes(service.id) ? 'arrow--up'
+                                    : 'arrow--down'
+                                }
+                              />
+                            </button>
+                          }
 
                           <span className='services__category-item-name'>{service.name}</span>
                           <span className='services__category-item-price'>
@@ -88,8 +90,10 @@ const Service: FC = () => {
                               })
                             }
 
-                            <p className='services__category-item-description'>
-                              {getDescription(service.id)}
+                            <p
+                              className='services__category-item-description'
+                              dangerouslySetInnerHTML={{ __html: getDescription(service.id) }}
+                            >
                             </p>
                           </div>
                         </SmoothCollapse>

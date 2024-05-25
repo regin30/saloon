@@ -27,12 +27,6 @@
 					"name": "Биотоки",
 					"place": null,
 					"price": [400]
-				},
-				{
-					"id": 24,
-					"name": "RF-лифтинг",
-					"place": null,
-					"price": [8000]
 				}
 			]
 		}
