@@ -66,8 +66,9 @@
 	}
 }
 
-@media (max-width: 645px) {
+@media (max-width: 866px) {
 	.preview {
+		max-height: 100%;
 		&::before {
 			content: "";
 			position: absolute;

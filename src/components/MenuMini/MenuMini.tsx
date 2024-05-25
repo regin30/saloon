@@ -1,33 +1,40 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import './MenuMini.scss'
 import { Modal } from 'antd'
 import SocialNetworks from '../SocialNetworks/SocialNetworks'
+import SmoothCollapse from 'react-smooth-collapse';
+import { useMyContext } from '../../context/context';
+import { ContextValue } from '../../types/types';
 
-interface IMenuMiniProps {
-  closeModal: (arg: boolean) => void;
-  opened: boolean
-}
+const MenuMini: FC = () => {
+  const [openContacts, setOpenContacts] = useState<boolean>(false)
+  const { setValue, value } = useMyContext<ContextValue>();
 
-const MenuMini: FC<IMenuMiniProps> = ({ closeModal, opened }) => {
   return (
     <Modal
-      open={opened}
-      onCancel={() => closeModal(false)}
+      open={value.menuMiniOpened}
+      onCancel={() => setValue({...value, menuMiniOpened: false})}
+      footer={null}
     >
       <div className='menu-modal'>
-        <span className='menu-modal__item'>О нас</span>
-        <span className='menu-modal__item'>Услуги</span>
-        <span className='menu-modal__item'>Акции</span>
-        <span className='menu-modal__item'>Отзывы</span>
+        <div className='menu-modal__container'>
+          <button><span className='menu-modal__item'>О нас</span></button>
+          <button><span className='menu-modal__item'>Услуги</span></button>
+          <button><span className='menu-modal__item'>Акции</span></button>
+          <button><span className='menu-modal__item'>Отзывы</span></button>
+          <button onClick={() => setOpenContacts(prev => !prev)}>
+            <span className='menu-modal__item'>Контакты</span>
+          </button>
 
-        <div className='menu-modal__contacts'>
-          <h2 className='menu-modal__subtitle'>Контакты</h2>
+          <div className='menu-modal__contacts'>
+            <SmoothCollapse expanded={openContacts}>
+              <span className='menu-modal__item'>Телефон</span>
+              <span className='menu-modal__item'>Адрес</span>
+              <span className='menu-modal__item'>Почта</span>
 
-          <span className='menu-modal__item'>Телефон</span>
-          <span className='menu-modal__item'>Адрес</span>
-          <span className='menu-modal__item'>Почта</span>
-
-          <SocialNetworks />
+              <SocialNetworks />
+            </SmoothCollapse>
+          </div>
         </div>
       </div>
     </Modal>

@@ -1,10 +1,12 @@
 .button{
 	padding: 20px 40px;
-	font-size: 2.2dvh;
+	font-size: 2.5dvh;
 	border: 2px solid var(--palette-middle);
 	border-radius: 50px;
 	font-family: 'Montserrat';
 	font-weight: 500;
+	max-width: 300px;
+	width: 100%;
 }
 
 @media (max-width: 768px) {
