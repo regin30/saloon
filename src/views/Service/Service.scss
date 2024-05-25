@@ -1,17 +1,19 @@
 .services {
 	display: flex;
 	justify-content: center;
-	width: 100%;
+	width: 100vw;
 
 	&__container {
 		max-width: 1200px;
 		width: 100%;
-		display: flex;
-		justify-content: center;
 
 		.services__category {
 			padding: 25px;
 			width: 100%;
+
+			h2 {
+				color: var(--palette-dark);
+			}
 
 			&-item-container {
 				border-bottom: 1px solid var(--palette-grey-1);
@@ -30,13 +32,13 @@
 						.arrow--down {
 							cursor: pointer;
 							transform: rotate(0deg);
-							fill: var(--palette-live-grey-2);
+							fill: var(--palette-dark);
 						}
 					
 						.arrow--up {
 							cursor: pointer;
 							transform: rotate(180deg);
-							fill: var(--palette-live-grey-2);
+							fill: var(--palette-dark);
 						}
 					}
 
@@ -44,12 +46,15 @@
 						width: 100%;
 						display: block;
 						font-size: 18px;
+						margin-right: 10px;
 					}
 
 					&-price {
 						display: block;
 						font-size: 18px;
 						white-space: nowrap;
+						color: var(--palette-dark);
+						font-weight: 500;
 					}
 
 					&-info {

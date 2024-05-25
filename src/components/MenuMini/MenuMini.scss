@@ -35,29 +35,27 @@
 			padding: 10px 0;
 
 			&:first-child {
-				.menu-modal__item {
-					font-family: 'Czizh';
-					font-size: 35px;
-				}
+				font-family: 'Czizh';
+				font-size: 35px;
 			}
 		}
+	}
 
-		.menu-modal__item {
-			display: flex;
-			justify-content: center;
-			padding: 10px 0;
-			font-weight: 500;
-			font-size: 20px;
-			font-family: 'Montserrat';
-		}
+	.menu-modal__item {
+		display: flex;
+		justify-content: center;
+		padding: 10px 0;
+		font-weight: 500;
+		font-size: 22px;
+		font-family: 'Montserrat';
+	}
 
-		.menu-modal__contacts {
-			border-top: 2px solid var(--palette-middle);
-			width: 100%;
-		}
+	.menu-modal__contacts {
+		border-top: 2px solid var(--palette-middle);
+		width: 100%;
+	}
 
-		.networks {
-			padding: 15px 0;
-		}
+	.networks {
+		padding: 15px 0;
 	}
 }

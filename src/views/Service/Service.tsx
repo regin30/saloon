@@ -49,6 +49,7 @@ const Service: FC = () => {
           currentList.map((category, index: number) => {
             return (
               <div key={index} className='services__category'>
+                <h2>{category.title}</h2>
                 {
                   category.services.map((service, serviceIndex: number) => {
                     return (
