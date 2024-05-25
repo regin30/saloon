@@ -1,8 +1,10 @@
 .header {
 	width: 100%;
+	max-width: 1200px;
 	height: 90px;
 	box-sizing: border-box;
 	padding: 0 20px;
+	margin: 0 auto;
 
 	.menu-mini__button {
 		padding: 0;
@@ -50,7 +52,7 @@
 		justify-content: flex-end;
 	}
 
-	@media (max-width: 892px) {
+	@media (max-width: 1020px) {
 		.header__menu, .header__menu-button {
 			display: none;
 		}
