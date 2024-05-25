@@ -8,7 +8,7 @@ const Button: FC<IButtonProps> = ({ title, fill }) => {
 			return {
 				backgroundColor: 'var(--palette-middle)',
 				color: 'var(--palette-white)',
-				border: 'none'
+				border: '2px solid var(--palette-middle)'
 			}
 		} else {
 			return {

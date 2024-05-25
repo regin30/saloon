@@ -1,11 +1,7 @@
 import { FC } from 'react'
-import './AboutUs.scss'
+import './AboutUsFull.scss'
 
-import RightPhoto from '../../assets/about_us_1.jpg'
-import BottomPhoto from '../../assets/about_us_2.jpg'
-
-
-const AboutUs: FC = () => {
+const AboutUsFull: FC = () => {
 	return (
 		<>
 			<div className='info'>
@@ -23,20 +19,10 @@ const AboutUs: FC = () => {
 						Мы предлагаем индивидуальные программы,
 						обеспечивающие максимальную пользу и результат за короткий промежуток времени.
 					</p>
-
-
-					<div className='content__image-container'>
-						<img src={BottomPhoto} alt='Image' className='img' />
-						<img src={BottomPhoto} alt='Image' className='img' />
-					</div>
-				</div>
-
-				<div className='image__container'>
-					<img src={RightPhoto} alt='Image' className='img' />
 				</div>
 			</div>
 		</>
 	)
 }
 
-export default AboutUs
+export default AboutUsFull

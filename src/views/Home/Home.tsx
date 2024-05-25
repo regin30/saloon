@@ -6,6 +6,7 @@ import MenuServices from '../../components/MenuServices/MenuServices'
 import Advantages from '../../components/Advantages/Advantages'
 import Reports from '../../components/Reports/Reports'
 import Preview from '../../components/Preview/Preview'
+import WhatsApp from '../../components/WhatsApp/WhatsApp'
 
 const Home: FC = () => {
 	return (
@@ -18,6 +19,8 @@ const Home: FC = () => {
 				<Advantages />
 
 				<MenuServices />
+
+				<WhatsApp />
 
 				<Reports />
 			</div>

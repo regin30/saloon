@@ -2,10 +2,10 @@ import { FC } from 'react'
 import './MenuButton.scss'
 import { IButtonProps } from '../../types/types'
 
-const MenuButton: FC<IButtonProps> = ({ title }) => {
+const MenuButton: FC<IButtonProps> = ({ title, onClick }) => {
   return (
     <>
-      <button className='menu-button'>{title}</button>
+      <button className='menu-button' onClick={onClick}>{title}</button>
     </>
   )
 }
