@@ -3,18 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://reg93.github.io/saloon/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "deploy": "gh-pages -d build -r https://github.com/regin30/saloon",
-    "clean": "gh-pages-clean",
+    "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "antd": "^5.16.2",
-    "gh-pages": "^6.1.1",
     "install": "^0.13.0",
     "npm": "^10.5.0",
     "react": "^18.2.0",
