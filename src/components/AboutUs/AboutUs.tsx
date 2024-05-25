@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import './AboutUs.scss'
 
-import RightPhoto from '../../assets/about_us_1.jpg'
-import BottomPhoto from '../../assets/about_us_2.jpg'
+import RightPhoto from '/assets/about_us_1.jpg'
+import BottomPhoto from '/assets/about_us_2.jpg'
 
 
 const AboutUs: FC = () => {

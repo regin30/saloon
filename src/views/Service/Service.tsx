@@ -7,7 +7,7 @@ import modeling from '../../db/modeling.json'
 import antiAge from '../../db/skincare.json'
 import aestethic from '../../db/aesthetic.json'
 import description from '../../db/services_descriptions.json'
-import ArrowDown from '../../assets/arrow_down.svg'
+import ArrowDown from '/assets/arrow_down.svg'
 
 const Service: FC = () => {
   const { id = null } = useParams()
