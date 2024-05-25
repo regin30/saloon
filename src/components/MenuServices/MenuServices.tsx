@@ -10,21 +10,21 @@ const MenuServices: FC = () => {
   return (
     <div className='services'>
       <div className='services__menu'>
-        <Link to={'/service/2'}>
+        <Link to={'/service/2'} className='services__link1'>
           <div className='services__block-photo'>
             <img src={Modeling} className='services__photo' />
             <p className='services__subtitle'>Моделирование фигуры</p>
           </div>
         </Link>
 
-        <Link to={'/service/3'}>
+        <Link to={'/service/3'} className='services__link2'>
           <div className='services__block-photo'>
             <img src={SkinCare} className='services__photo' />
             <p className='services__subtitle'>Уход за лицом и телом</p>
           </div>
         </Link>
 
-        <Link to={'/service/1'}>
+        <Link to={'/service/1'} className='services__link3'>
           <div className='services__block-photo'>
             <img src={AntiAge} className='services__photo' />
             <p className='services__subtitle'>Эстетика</p>

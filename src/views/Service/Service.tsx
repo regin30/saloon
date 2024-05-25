@@ -43,21 +43,21 @@ const Service: FC = () => {
   }
 
   return (
-    <div className='services'>
-      <div className='services__container'>
+    <div className='services-list'>
+      <div className='services-list__container'>
         {
           currentList.map((category, index: number) => {
             return (
-              <div key={index} className='services__category'>
+              <div key={index} className='services-list__category'>
                 <h2>{category.title}</h2>
                 {
                   category.services.map((service, serviceIndex: number) => {
                     return (
-                      <div key={serviceIndex} className='services__category-item-container'>
-                        <div className='services__category-item'>
+                      <div key={serviceIndex} className='services-list__category-item-container'>
+                        <div className='services-list__category-item'>
                           {id && +id !== 1 &&
                             <button
-                              className='services__category-item-button'
+                              className='services-list__category-item-button'
                               onClick={() => handleArrowButton(service.id)}>
                               <img
                                 src={ArrowDown}
@@ -69,20 +69,20 @@ const Service: FC = () => {
                             </button>
                           }
 
-                          <span className='services__category-item-name'>{service.name}</span>
-                          <span className='services__category-item-price'>
+                          <span className='services-list__category-item-name'>{service.name}</span>
+                          <span className='services-list__category-item-price'>
                             {service.price.length > 1 ? 'от ' + service.price[0] : service.price[0]}
                           </span>
                         </div>
 
                         <SmoothCollapse expanded={openedInfo.includes(service.id)}>
-                          <div className='services__category-item-info'>
+                          <div className='services-list__category-item-info'>
                             {service.place &&
                               service.place.map((el, placeIndex) => {
                                 return (
-                                  <div key={placeIndex} className='services__category-item-place'>
-                                    <span className='services__category-item-place-name'>{el}</span>
-                                    <span className='services__category-item-place-price'>
+                                  <div key={placeIndex} className='services-list__category-item-place'>
+                                    <span className='services-list__category-item-place-name'>{el}</span>
+                                    <span className='services-list__category-item-place-price'>
                                       {service.price[placeIndex]}
                                     </span>
                                   </div>
@@ -91,7 +91,7 @@ const Service: FC = () => {
                             }
 
                             <p
-                              className='services__category-item-description'
+                              className='services-list__category-item-description'
                               dangerouslySetInnerHTML={{ __html: getDescription(service.id) }}
                             >
                             </p>
